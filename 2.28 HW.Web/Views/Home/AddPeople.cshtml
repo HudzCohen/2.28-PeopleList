@@ -1,0 +1,30 @@
+﻿
+
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <button class="btn btn-outline-info" id="add-rows">Add Row</button>
+        <form method="post" style="margin-top:10px;" action="/home/addPeople">
+            <div id="ppl-rows">
+                <div class="row" style="margin-bottom:10px;">
+                    <div class="col-md-row">
+                        <input class="form-control" type="text" name="people[0].firstname" placeholder="First Name" />
+                    </div>
+                    <div class="col-md-row mt-2" style="margin-bottom: 10px;">
+                        <input class="form-control" type="text" name="people[0].lastname" placeholder="Last Name" />
+                    </div>
+                    <div class="col-md-row" style="margin-bottom: 10px;" >
+                        <input class="form-control" type="text" name="people[0].age" placeholder="Age"/>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn btn-outline-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/add-ppl.js"></script>
+};

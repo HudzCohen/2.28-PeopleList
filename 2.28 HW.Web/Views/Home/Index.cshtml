@@ -1,0 +1,36 @@
+﻿@using _2._28_HW.Data
+@model PeopleViewModel
+
+
+<div class="row">
+
+    @if (!String.IsNullOrEmpty(Model.Message))
+    {
+        <div class="alert alert-dark alert-dismissible fade show" role="alert">
+            <strong>@Model.Message</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    <div class="col-md-12">
+        <a href="/home/addpeople" class="btn btn-success">Add People</a>
+        <table class="table table-hover table-bordered table-dark mt-3">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Person p in Model.People)
+                {
+                    <tr>
+                        <td>@p.FirstName</td>
+                        <td>@p.LastName</td>
+                        <td>@p.Age</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
